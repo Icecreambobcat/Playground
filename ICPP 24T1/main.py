@@ -20,8 +20,10 @@ class solution:
                 number = str(float(convert_dict[word]))
                 number = number.replace(',', '.')  # Replace commas with periods
                 inter_list.append(number)
+
             elif word in operators.keys():
                 inter_list.append(operators[word])
+
             else:
                 return "Invalid input. Please try again."
 
@@ -50,13 +52,16 @@ def main() -> None:
                 print("Index out of range.")
             else:
                 print(prev_calcs[index].output_line)
+                
         if input_line == "":
             break
 
         sol = solution(input_line)
+
         if sol.output_line != "Invalid input. Please try again.":
             prev_calcs.append(sol)
             print(sol.output_line)
+
         else:
             print(sol.output_line)
 
