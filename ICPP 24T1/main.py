@@ -52,6 +52,7 @@ def main() -> None:
                 print("Index out of range.")
             else:
                 print(prev_calcs[index].output_line)
+                continue
                 
         if input_line == "":
             break
